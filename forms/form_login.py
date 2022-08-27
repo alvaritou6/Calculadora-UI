@@ -10,6 +10,8 @@ class App:
     def verificar(self):
         usu = self.usuario.get()
         password = self.password.get()
+        self.usuario.delete("0", "end")
+        self.password.delete("0", "end")
         if (usu == 'root' and password == 'klarotyc'):
             self.ventana.destroy()
             calc()
